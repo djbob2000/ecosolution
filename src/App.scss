@@ -1,0 +1,17 @@
+@import '../styles/breakpoints';
+
+.read-the-docs {
+  color: #ff0000;
+
+  @include breakpoint(mobile) {
+    color: #ff9100;
+  }
+
+  @include breakpoint(tablet) {
+    color: #ccff00;
+  }
+
+  @include breakpoint(desktop) {
+    color: #00ffff;
+  }
+}

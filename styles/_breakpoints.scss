@@ -1,0 +1,40 @@
+$breakpoints: (
+  mobile: 360px,
+  tablet: 768px,
+  desktop: 1440px,
+);
+
+/// Get breakpoint value by name or px.
+///
+/// @param { number | string} $value - Содержит имя перелома или значение в пикселях.
+///
+/// @return {number} - Число в пикселях.
+@function getBreakpoint($value) {
+
+  // Проверка на нахождение точки перелома в списке, если ее нет, то возвращает число в пикселях.
+  @if not map-has-key($breakpoints, $value) {
+    @return $value;
+  }
+
+  @return map-get($breakpoints, $value);
+}
+
+@mixin breakpoint($from, $to: false) {
+  @if not $to {
+    @media screen and (min-width: getBreakpoint($from)) {
+      @content;
+    }
+  }
+
+  @else if not $from {
+    @media screen and (max-width: (getBreakpoint($to) - 1px)) {
+      @content;
+    }
+  }
+
+  @else {
+    @media screen and (min-width: getBreakpoint($from)) and (max-width: (getBreakpoint($to) - 1px)) {
+      @content;
+    }
+  }
+}
