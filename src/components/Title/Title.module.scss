@@ -1,0 +1,62 @@
+@import '@/styles/breakpoints';
+
+.h01 {
+    color: var(--color-text, #173d33);
+    font-family: Oswald;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 36px;
+    text-transform: uppercase;
+
+    @include breakpoint(tablet) {
+        font-size: 48px;
+        line-height: 48px;
+    }
+
+    @include breakpoint(desktop) {
+        font-size: 64px;
+        line-height: 64px;
+    }
+}
+
+.h02 {
+    color: var(--color-text, #173d33);
+    text-align: center;
+    font-family: Oswald;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    text-transform: uppercase;
+
+    @include breakpoint(tablet) {
+        font-size: 36px;
+        line-height: 36px;
+    }
+
+    @include breakpoint(desktop) {
+        font-size: 48px;
+        line-height: 48px;
+    }
+}
+
+.h03 {
+    color: var(--color-text, #173d33);
+    font-family: Oswald;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    text-transform: uppercase;
+
+    @include breakpoint(tablet) {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    @include breakpoint(desktop) {
+        font-size: 32px;
+        line-height: 48px;
+    }
+}

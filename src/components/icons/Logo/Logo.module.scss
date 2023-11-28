@@ -1,0 +1,19 @@
+@import '@/styles/breakpoints';
+
+
+
+@include breakpoint(mobile) {}
+
+@include breakpoint(tablet) {}
+
+@include breakpoint(desktop) {}
+
+
+.logo {
+    transition: fill var(--animation);
+    color: var(--color-primary, #173d33);
+}
+
+.logo:hover {
+    color: var(--color-accent, #97D28B);
+}

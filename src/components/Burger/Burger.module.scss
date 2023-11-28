@@ -1,0 +1,16 @@
+.burger {
+    display: inline-flex;
+    height: 40px;
+    width: 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 500px;
+    background-color: var(--color-burger);
+    transition: color var(--animation);
+
+    &:hover,
+    &:focus {
+        background-color: var(--color-accent);
+
+    }
+}

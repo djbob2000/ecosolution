@@ -1,0 +1,20 @@
+.text {
+    color: var(--color-text, #173d33);
+    text-align: justify;
+    font-family: Fira Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.64px;
+
+    @include breakpoint(tablet) {
+        font-size: 48px;
+        line-height: 48px;
+    }
+
+    @include breakpoint(desktop) {
+        font-size: 64px;
+        line-height: 64px;
+    }
+}

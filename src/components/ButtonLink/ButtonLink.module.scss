@@ -1,0 +1,28 @@
+@import '@/styles/breakpoints';
+
+.button {
+    display: none;
+
+    @include breakpoint(tablet) {
+        display: inline-flex;
+        padding: 10px 16px;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        border-radius: 500px;
+        background: var(--color-accent);
+        color: var(--color-primary, #173d33);
+        font-family: var(--font-primary);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -0.64px;
+
+        &:hover,
+        &:focus {
+            background: var(--color-primary);
+            color: var(--color-accent);
+        }
+    }
+}

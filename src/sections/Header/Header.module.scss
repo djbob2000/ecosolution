@@ -1,0 +1,12 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 112px;
+    z-index: 99;
+}
+
+.btnWrap {
+    display: flex;
+    gap: 12px;
+}
