@@ -1,6 +1,6 @@
 import Container from '../../components/Container/Container';
 import styles from './Header.module.scss';
-import { Logo } from '@/components/icons/Logo/Logo';
+import Logo from '@/components/Logo/Logo';
 import { Burger } from '@/components/Burger/Burger';
 import { ButtonLink } from '@/components/ButtonLink/ButtonLink';
 
