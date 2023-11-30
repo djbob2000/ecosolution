@@ -1,8 +1,10 @@
+import styles from './HomePage.module.scss';
+import Main from '../../sections/Main/Main';
 const HomePage = () => {
   return (
     <>
-      <main className="main">
-        <div>HomePage</div>
+      <main className={styles.main}>
+        <Main />
       </main>
       <footer className="footer"></footer>
     </>

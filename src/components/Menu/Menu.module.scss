@@ -1,3 +1,6 @@
+@import '@/styles/breakpoints';
+
+
 .backdrop {
     position: fixed;
     top: 0;
@@ -9,15 +12,77 @@
 
 }
 
+.menu {
+    position: fixed;
+    top: 36px;
+    right: 20px;
+    left: 20px;
+    bottom: 36px;
+    padding: 24px;
+    border-radius: 25px;
+    background: var(--color-bg-menu);
+    backdrop-filter: blur(12.5px);
+
+    @include breakpoint(tablet) {
+        left: initial;
+        bottom: initial;
+        width: 320px;
+    }
+
+    @include breakpoint(desktop) {
+        left: initial;
+        bottom: initial;
+        width: 365px;
+    }
+
+}
+
 .btn_close {
+    // position: relative;
+
     display: flex;
-    align-items: center;
+    align-items: flex-end;
+    gap: 4px;
+    padding-bottom: 8px;
     color: var(--color-white);
     margin-left: -5px;
+    transition: color var(--animation);
 
     &:hover,
     &:focus {
         color: var(--color-accent);
 
     }
+
+    &:active {
+        color: var(--color-accent);
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 24px;
+        right: 24px;
+        // top: 8px;
+        margin-bottom: -8px;
+        height: 1px;
+        background-color: var(--color-white);
+
+    }
+}
+
+.closeText {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.8px;
+
+
+}
+
+.closeIcon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
 }

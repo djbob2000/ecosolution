@@ -1,24 +1,28 @@
-import { menuItems } from '@/constants/menuItems';
+import PropTypes from 'prop-types';
 import IconClose from '@/assets/icons/close.svg?react';
 import styles from './Menu.module.scss';
+import MenuList from './MenuList/MenuList';
 
-export const Menu = toggleMenu => {
+export const Menu = ({ toggleMenu }) => {
   return (
     <div className={styles.backdrop}>
-      <div className="menu">
-        <div className={styles.btn_close}>
-          <IconClose />
-          <span>close</span>
-        </div>
-
-        <ul className="menu__list">
-          {menuItems.map((item, index) => (
-            <li key={index}>
-              <a href={item.href}>{item.text}</a>
-            </li>
-          ))}
-        </ul>
+      <div className={styles.menu}>
+        <button
+          type="button"
+          className={styles.btn_close}
+          onClick={() => toggleMenu()}
+          role="button"
+          aria-label="close menu"
+        >
+          <IconClose className={styles.closeIcon} />
+          <span className={styles.closeText}>close</span>
+        </button>
+        <MenuList />
       </div>
     </div>
   );
+};
+
+Menu.propTypes = {
+  toggleMenu: PropTypes.func.isRequired,
 };

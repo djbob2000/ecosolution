@@ -1,0 +1,101 @@
+@import '@/styles/breakpoints';
+
+
+
+.section {
+  padding: 110px 0 48px;
+
+  @include breakpoint(tablet) {
+    padding: 128px 0 100px;
+  }
+
+  @include breakpoint(desktop) {
+    padding: 152px 0 100px;
+  }
+}
+
+.titleBlock {
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--color-accent);
+  margin-bottom: 24px;
+
+  @include breakpoint(tablet) {
+    display: flex;
+    gap: 65px;
+  }
+
+  @include breakpoint(desktop) {
+    display: flex;
+    gap: 296px;
+  }
+}
+
+
+.textWrapper {
+  text-align: center;
+
+  @include breakpoint(tablet) {
+    text-align: left;
+  }
+
+  @include breakpoint(desktop) {
+    text-align: left;
+    width: 363px;
+  }
+}
+
+.text {
+  text-align: justify;
+  font-size: 16px;
+  font-style: normal;
+  letter-spacing: -0.64px;
+  margin-bottom: 24px;
+
+  @include breakpoint(tablet) {
+    margin-bottom: 43px;
+  }
+
+  @include breakpoint(desktop) {
+    margin-bottom: 20px;
+  }
+}
+
+.contactsList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 48px;
+
+  @include breakpoint(tablet) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.contact {
+  color: text-color;
+  line-height: normal;
+  letter-spacing: -0.64px;
+
+  &:last-child {
+    display: none;
+
+    @include breakpoint(tablet) {
+      display: inherit;
+    }
+  }
+
+  &:first-child {
+    @include breakpoint(desktop) {
+      width: 690px;
+    }
+  }
+}
+
+.picture img {
+  object-fit: cover;
+  margin: 0 auto;
+
+}

@@ -1,11 +1,16 @@
 import PropTypes from 'prop-types';
-
+import classNames from 'classnames';
 import styles from './Container.module.scss';
 
-export default function Container({ children }) {
-  return <div className={styles.container}>{children}</div>;
-}
+const Container = ({ children, className }) => {
+  const classes = classNames(styles.container, className);
+
+  return <div className={classes}>{children}</div>;
+};
+
+export default Container;
 
 Container.propTypes = {
   children: PropTypes.node.isRequired,
+  className: PropTypes.string,
 };

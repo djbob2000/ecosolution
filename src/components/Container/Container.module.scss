@@ -12,6 +12,8 @@
 
 
     @include breakpoint(tablet) {
+
+        margin: 0 auto;
         max-width: 768px;
         padding: 0 30px;
     }
@@ -19,6 +21,8 @@
 
 
     @include breakpoint(desktop) {
+
+        margin: 0 auto;
         max-width: 1280px;
         padding: 0 20px;
     }
