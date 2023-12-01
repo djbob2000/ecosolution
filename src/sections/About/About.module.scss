@@ -1,0 +1,99 @@
+@import '@/styles/breakpoints';
+
+.gridContainer {
+
+    display: grid;
+    gap: 24px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    @include breakpoint(tablet) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+
+    }
+
+
+}
+
+.textWrapper {
+    text-align: justify;
+    font-size: 16px;
+    font-style: normal;
+    letter-spacing: -0.64px;
+
+    @include breakpoint(tablet) {
+        padding-left: 11px;
+        border-left: 1px solid var(--color-accent);
+    }
+
+    @include breakpoint(desktop) {
+        padding-left: 161px;
+    }
+}
+
+.section_about {
+    padding-bottom: 36px;
+
+    @include breakpoint(tablet) {
+        padding-bottom: 100px;
+    }
+
+    @include breakpoint(desktop) {
+        padding-bottom: 120px;
+    }
+}
+
+.titleBlock {
+    margin-bottom: 36px;
+
+    @include breakpoint(tablet) {
+        display: flex;
+        gap: 82px;
+        margin-bottom: 100px;
+    }
+
+    @include breakpoint(desktop) {
+        display: flex;
+        gap: 254px;
+        margin-bottom: 126px;
+    }
+}
+
+.picture {
+    &>img {
+        width: 100%;
+    }
+
+    &:nth-child(3) {
+        display: none;
+
+        @include breakpoint(tablet) {
+            display: inherit;
+            grid-column: 3 / 5;
+        }
+    }
+
+    &:nth-child(4) {
+        display: none;
+
+        @include breakpoint(tablet) {
+            display: inherit;
+            grid-column: 1 / 3;
+        }
+    }
+}
+
+
+.about_title {
+    width: 319px;
+
+    @include breakpoint(tablet) {
+        width: 272px;
+    }
+
+    @include breakpoint(desktop) {
+        width: 365px;
+
+    }
+}

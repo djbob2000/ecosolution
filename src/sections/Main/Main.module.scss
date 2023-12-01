@@ -2,7 +2,7 @@
 
 
 
-.section {
+.section_main {
   padding: 110px 0 48px;
 
   @include breakpoint(tablet) {
@@ -10,7 +10,7 @@
   }
 
   @include breakpoint(desktop) {
-    padding: 152px 0 100px;
+    padding: 152px 0 126px;
   }
 }
 
@@ -94,8 +94,36 @@
   }
 }
 
-.picture img {
-  object-fit: cover;
-  margin: 0 auto;
+.picture {
+  &>img {
+    object-fit: cover;
+    margin: 0 auto;
+    width: 100%;
+    height: 200px;
 
+    @include breakpoint(tablet) {
+      width: 708px;
+      height: 348px;
+    }
+
+    @include breakpoint(desktop) {
+      width: 1240px;
+      height: 524px;
+    }
+  }
+
+
+}
+
+.main_title {
+  width: 320px;
+
+  @include breakpoint(tablet) {
+    width: 301px;
+  }
+
+  @include breakpoint(desktop) {
+    width: 485px;
+
+  }
 }

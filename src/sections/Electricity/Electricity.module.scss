@@ -1,0 +1,106 @@
+@import '@/styles/breakpoints';
+
+.section_electricity {
+    padding-bottom: 36px;
+
+    @include breakpoint(tablet) {
+        padding-bottom: 100px;
+    }
+
+    @include breakpoint(desktop) {
+        padding-bottom: 120px;
+
+    }
+}
+
+.container_electricity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.electricity_title {
+    position: relative;
+    width: 286px;
+    text-align: center;
+    margin-bottom: 96px;
+
+    @include breakpoint(tablet) {
+        width: 368px;
+        margin-bottom: 135px;
+    }
+
+    @include breakpoint(desktop) {
+        width: 491px;
+        margin-bottom: 120px;
+
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        width: 1px;
+        height: 48px;
+        background-color: var(--color-accent);
+        position: absolute;
+        bottom: calc(48px + 24px)*(-1);
+        left: 50%;
+    }
+
+}
+
+.textWrapper {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    @include breakpoint(tablet) {
+        gap: 24px;
+    }
+
+    @include breakpoint(desktop) {
+        gap: 24px;
+
+    }
+}
+
+.number {
+    color: var(--color-accent);
+    text-align: center;
+    font-family: Oswald;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+
+    @include breakpoint(tablet) {
+        font-size: 100px;
+    }
+
+    @include breakpoint(desktop) {
+        font-size: 164px;
+
+    }
+}
+
+.unit {
+    color: var(--color-text);
+    text-align: center;
+    font-family: Oswald;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+
+    @include breakpoint(tablet) {
+        font-size: 28px;
+        line-height: 1.71429;
+    }
+
+    @include breakpoint(desktop) {
+        font-size: 48px;
+
+    }
+}

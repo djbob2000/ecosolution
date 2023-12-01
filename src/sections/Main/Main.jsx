@@ -12,10 +12,12 @@ import mainDesktop2x from '@/assets/images/main/main-desktop@2x.jpg';
 
 export default function Main() {
   return (
-    <section className={styles.section}>
+    <section className={styles.section_main} id="main">
       <Container>
         <div role="presentation" className={styles.titleBlock}>
-          <Title h={1} text="RENEWABLE ENERGY For any task" />
+          <Title h={1} className={styles.main_title}>
+            RENEWABLE ENERGY For any task
+          </Title>
           <div role="presentation" className={styles.textWrapper}>
             <p className={styles.text}>
               Development and implementation of renewable non-polluting energy

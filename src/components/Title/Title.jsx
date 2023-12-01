@@ -1,23 +1,38 @@
+// import { createElement } from 'react';
+// import PropTypes from 'prop-types';
+// import styles from './Title.module.scss';
+
+// export default function Title({ h, text, additionalStyle }) {
+//   const headingClass = styles[`h0${h}`] || '';
+//   const addStyle = additionalStyle ? styles[additionalStyle] : '';
+
+//   return h >= 1 && h <= 3
+//     ? createElement(`h${h}`, { className: `${headingClass} ${addStyle}` }, text)
+//     : null;
+// }
+
+// Title.propTypes = {
+//   h: PropTypes.oneOf([1, 2, 3]).isRequired,
+//   text: PropTypes.any.isRequired,
+//   additionalStyle: PropTypes.string,
+// };
+import { createElement } from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import styles from './Title.module.scss';
 
-export default function Title({ h, text }) {
-  switch (h) {
-    case 1:
-      return <h1 className={styles['h01']}>{text}</h1>;
+export default function Title({ children, h, className }) {
+  const headingClass = styles[`h0${h}`] || '';
 
-    case 2:
-      return <h2 className={styles['h02']}>{text}</h2>;
+  const combinedClass = classNames(headingClass, className);
 
-    case 3:
-      return <h3 className={styles['h03']}>{text}</h3>;
-
-    default:
-      return null;
-  }
+  return h >= 1 && h <= 3
+    ? createElement(`h${h}`, { className: combinedClass }, children)
+    : null;
 }
 
 Title.propTypes = {
-  h: PropTypes.number.isRequired,
-  text: PropTypes.any.isRequired,
+  h: PropTypes.oneOf([1, 2, 3]).isRequired,
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string,
 };
