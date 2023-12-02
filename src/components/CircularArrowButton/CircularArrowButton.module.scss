@@ -1,0 +1,50 @@
+@import '@/styles/breakpoints';
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    color: var(--color-primary, #173d33);
+    background-color: var(--color-accent);
+    transition: border var(--animation), color var(--animation), background-color var(--animation);
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+        color: var(--color-accent);
+        background-color: var(--color-primary);
+    }
+
+    svg {
+
+        width: 28px;
+        height: 28px;
+    }
+
+    &.outlined {
+        width: 66px;
+        height: 66px;
+        background-color: transparent;
+        border: 1px solid var(--color-primary);
+
+        &:hover {
+            border: 1px solid var(--color-accent);
+        }
+
+        @include breakpoint(desktop) {
+            width: 84px;
+            height: 84px;
+
+        }
+
+        svg {
+            width: 36px;
+            height: 36px;
+        }
+    }
+
+
+}

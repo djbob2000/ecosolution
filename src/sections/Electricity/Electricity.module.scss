@@ -37,21 +37,24 @@
     }
 
     &::after {
-        content: '';
+        content: "";
         display: block;
         width: 1px;
         background-color: var(--color-accent);
         position: absolute;
-        bottom: calc(48px + 24px)*(-1);
+        bottom: -72px;
         left: 50%;
+        height: 48px;
+        transform: translateX(-50%);
 
         @include breakpoint(tablet) {
-            bottom: calc(87px + 24px)*(-1);
+            height: 87px;
+            bottom: -111px;
         }
 
         @include breakpoint(desktop) {
-            bottom: calc(87px + 16px)*(-1);
-
+            height: 87px;
+            bottom: -103px;
         }
     }
 

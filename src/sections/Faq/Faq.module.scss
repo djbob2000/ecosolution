@@ -40,6 +40,12 @@
 .title_faq {
     grid-column: 2;
     grid-row: 1;
+    width: 250px;
+
+    @include breakpoint(desktop) {
+        width: 500px;
+        padding-left: 137px;
+    }
 }
 
 .cta {
@@ -54,6 +60,11 @@
 
 .after_text {
     margin-bottom: 12px;
+
+    @include breakpoint(desktop) {
+        width: 500px;
+        padding-left: 137px;
+    }
 }
 
 .buttonLink {

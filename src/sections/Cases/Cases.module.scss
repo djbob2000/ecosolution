@@ -1,0 +1,116 @@
+@import '@/styles/breakpoints';
+
+@include breakpoint(tablet) {}
+
+@include breakpoint(desktop) {}
+
+.section_cases {
+    position: relative;
+    margin-bottom: 36px;
+
+    @include breakpoint(tablet) {
+        margin-bottom: 100px;
+    }
+
+    @include breakpoint(desktop) {
+        margin-bottom: 120px;
+    }
+}
+
+.title-cases {
+    width: 264px;
+
+    @include breakpoint(tablet) {
+        margin-bottom: 0;
+    }
+
+    @include breakpoint(desktop) {
+        width: 398px;
+        margin-bottom: 0;
+    }
+}
+
+.slider-header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 26px;
+
+    @include breakpoint(tablet) {
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 38px;
+    }
+
+    @include breakpoint(desktop) {
+        margin-bottom: 120px;
+    }
+
+}
+
+.slider-control {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+
+    }
+
+
+
+    @include breakpoint(tablet) {
+        width: initial;
+        gap: 130px;
+
+        &::before {
+            content: "";
+            top: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+            position: absolute;
+            width: 1px;
+            display: none;
+            background-color: var(--color-accent);
+
+            @include breakpoint(tablet) {
+                display: initial;
+                height: 65px;
+            }
+
+            @include breakpoint(desktop) {
+                display: initial;
+                height: 96px;
+            }
+        }
+    }
+
+    @include breakpoint(desktop) {
+        gap: 193px;
+    }
+
+
+}
+
+.btn-wrap {
+    display: flex;
+    gap: 12px;
+
+    @include breakpoint(desktop) {
+        gap: 24px;
+    }
+}
+
+.slider-current-slide {
+    color: var(--color-text);
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: -1.12px;
+    transform: translateY(7px);
+
+    & span {
+        color: rgba(23, 61, 51, 0.25);
+    }
+}
