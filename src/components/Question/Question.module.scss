@@ -1,0 +1,37 @@
+.question_form {
+    display: flex;
+    // justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 0;
+    border-top: 1px solid var(--color-accent);
+}
+
+.openButton {
+    display: flex;
+    width: 16px;
+    height: 16px;
+    justify-content: center;
+    align-items: center;
+}
+
+.question {
+    color: var(--color-text);
+    text-align: justify;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.72px;
+}
+
+.answer {
+    color: var(--color-text);
+    text-align: justify;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.56px;
+    padding-bottom: 16px;
+}

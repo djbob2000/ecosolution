@@ -40,11 +40,19 @@
         content: '';
         display: block;
         width: 1px;
-        height: 48px;
         background-color: var(--color-accent);
         position: absolute;
         bottom: calc(48px + 24px)*(-1);
         left: 50%;
+
+        @include breakpoint(tablet) {
+            bottom: calc(87px + 24px)*(-1);
+        }
+
+        @include breakpoint(desktop) {
+            bottom: calc(87px + 16px)*(-1);
+
+        }
     }
 
 }

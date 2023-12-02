@@ -3,7 +3,7 @@ import Container from '../../components/Container/Container';
 import styles from './Header.module.scss';
 import Logo from '@/components/Logo/Logo';
 import { Burger } from '@/components/Burger/Burger';
-import { ButtonLink } from '@/components/ButtonLink/ButtonLink';
+import ButtonLink from '@/components/ButtonLink/ButtonLink';
 
 export const Header = () => {
   const { backgroundColor } = useScrollHook();

@@ -1,21 +1,3 @@
-// import { createElement } from 'react';
-// import PropTypes from 'prop-types';
-// import styles from './Title.module.scss';
-
-// export default function Title({ h, text, additionalStyle }) {
-//   const headingClass = styles[`h0${h}`] || '';
-//   const addStyle = additionalStyle ? styles[additionalStyle] : '';
-
-//   return h >= 1 && h <= 3
-//     ? createElement(`h${h}`, { className: `${headingClass} ${addStyle}` }, text)
-//     : null;
-// }
-
-// Title.propTypes = {
-//   h: PropTypes.oneOf([1, 2, 3]).isRequired,
-//   text: PropTypes.any.isRequired,
-//   additionalStyle: PropTypes.string,
-// };
 import { createElement } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
