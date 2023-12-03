@@ -3,7 +3,7 @@
 
 
 .section_main {
-  padding: 110px 0 48px;
+  padding: 110px 0 36px;
 
   @include breakpoint(tablet) {
     padding: 128px 0 100px;
@@ -21,7 +21,8 @@
 
   @include breakpoint(tablet) {
     display: flex;
-    gap: 65px;
+    gap: 145px;
+    margin-bottom: 16px;
   }
 
   @include breakpoint(desktop) {
@@ -66,7 +67,7 @@
   justify-content: center;
   align-items: center;
   gap: 8px;
-  margin-bottom: 48px;
+  margin-bottom: 39px;
 
   @include breakpoint(tablet) {
     flex-direction: row;
@@ -88,8 +89,12 @@
   }
 
   &:first-child {
+    @include breakpoint(tablet) {
+      width: 310px;
+    }
+
     @include breakpoint(desktop) {
-      width: 690px;
+      width: 610px;
     }
   }
 }
@@ -119,7 +124,7 @@
   width: 320px;
 
   @include breakpoint(tablet) {
-    width: 301px;
+    width: initial;
   }
 
   @include breakpoint(desktop) {

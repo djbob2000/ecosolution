@@ -35,7 +35,7 @@ const Faq = () => {
           <p className={styles.after_text}>
             Didn&apos;t find the answer to your question?
           </p>
-          <ButtonLink to={'#contact'} className={styles.buttonLink}>
+          <ButtonLink to={'#contacts'} className={styles.buttonLink}>
             Contact Us
           </ButtonLink>
         </div>

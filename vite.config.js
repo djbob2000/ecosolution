@@ -6,7 +6,7 @@ import svgr from 'vite-plugin-svgr';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), svgr()],
-  base: `/ecosolution`,
+  base: `/ecosolution/`,
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),

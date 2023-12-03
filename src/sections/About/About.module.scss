@@ -10,6 +10,12 @@
     @include breakpoint(tablet) {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
+        gap: 24px;
+
+    }
+
+    @include breakpoint(desktop) {
+        gap: 48px;
 
     }
 
@@ -41,6 +47,16 @@
 
     @include breakpoint(desktop) {
         padding-bottom: 120px;
+    }
+
+    & svg {
+        width: 16px;
+        height: 16px;
+
+        @include breakpoint(desktop) {
+            width: 24px;
+            height: 24px;
+        }
     }
 }
 

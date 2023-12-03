@@ -18,6 +18,10 @@
         font-style: normal;
         letter-spacing: -0.56px;
         padding-top: 12px;
+
+        @include breakpoint(desktop) {
+            padding-top: 24px;
+        }
     }
 
     &:nth-child(3) {

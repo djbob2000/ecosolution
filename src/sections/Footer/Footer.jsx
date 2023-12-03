@@ -11,7 +11,9 @@ const Footer = () => {
         <footer className={styles.footer} id="footer">
           <div className={styles.wrapper}>
             <Logo className={styles.logo} />
-            <CircularArrowButton angle={0} className={styles.btn} />
+            <a href="#main" className={styles['to-top']}>
+              <CircularArrowButton angle={0} className={styles.btn} />
+            </a>
             <div className={styles.socials}>
               <a
                 href="https://www.facebook.com/"

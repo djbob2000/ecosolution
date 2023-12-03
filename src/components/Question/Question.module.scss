@@ -1,16 +1,25 @@
+@import '@/styles/breakpoints';
+
 .question_form {
     display: flex;
-    // justify-content: space-between;
     align-items: center;
     gap: 8px;
     padding: 16px 0;
     border-top: 1px solid var(--color-accent);
+
+    @include breakpoint(tablet) {
+        display: flex;
+        gap: 15px;
+    }
+
+    @include breakpoint(desktop) {
+        padding: 24px 0;
+        gap: 24px;
+    }
 }
 
 .openButton {
     display: flex;
-    width: 16px;
-    height: 16px;
     justify-content: center;
     align-items: center;
 }
@@ -23,6 +32,11 @@
     font-weight: 400;
     line-height: normal;
     letter-spacing: -0.72px;
+
+    @include breakpoint(desktop) {
+        font-size: 24px;
+        letter-spacing: -0.96px;
+    }
 }
 
 .answer {
@@ -34,4 +48,38 @@
     line-height: normal;
     letter-spacing: -0.56px;
     padding-bottom: 16px;
+    padding-left: 24px;
+
+    @include breakpoint(tablet) {
+        padding-left: 42px;
+    }
+
+    @include breakpoint(desktop) {
+        font-size: 16px;
+        letter-spacing: -0.64px;
+        padding-left: 53px;
+        padding-bottom: 32px;
+    }
+}
+
+.plusIcon {
+    color: var(--color-accent);
+    width: 16px;
+    height: 16px;
+
+    @include breakpoint(tablet) {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+.minusIcon {
+    color: var(--color-text);
+    width: 16px;
+    height: 16px;
+
+    @include breakpoint(tablet) {
+        width: 28px;
+        height: 28px;
+    }
 }

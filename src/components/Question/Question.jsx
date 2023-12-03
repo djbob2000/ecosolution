@@ -11,7 +11,11 @@ const Question = ({ item, isOpen, toggleAnswer }) => (
         className={styles.openButton}
         onClick={() => toggleAnswer(item.id)}
       >
-        {isOpen ? <MinusIcon /> : <PlusIcon />}
+        {isOpen ? (
+          <MinusIcon className={styles.minusIcon} />
+        ) : (
+          <PlusIcon className={styles.plusIcon} />
+        )}
       </button>
       <p className={styles.question}>{item.question}</p>
     </div>
