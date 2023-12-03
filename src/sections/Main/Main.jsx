@@ -24,7 +24,9 @@ export default function Main() {
               sources, generating power generation using energy wind, sun,
               water, biomass
             </p>
-            <ButtonArrow text="Learn more" />
+            <a href="#cases">
+              <ButtonArrow>Learn more</ButtonArrow>
+            </a>
           </div>
         </div>
         <ul className={styles.contactsList}>

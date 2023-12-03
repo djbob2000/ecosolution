@@ -9,6 +9,9 @@
 }
 
 .menu-item-link {
+    display: flex;
+    gap: 8px;
+    align-items: center;
     color: rgba(255, 255, 255, 0.25);
     font-size: 24px;
     font-style: normal;

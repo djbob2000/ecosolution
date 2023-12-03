@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { menuItems } from '@/constants/menuItems';
 import styles from './MenuList.module.scss';
+import ArrowTopRightIcon from '@/assets/icons/arrow-top-right.svg?react';
 
 export default function MenuList({ toggleMenu }) {
   return (
@@ -13,7 +14,7 @@ export default function MenuList({ toggleMenu }) {
             className={styles['menu-item-link']}
             onClick={toggleMenu}
           >
-            {item.text}
+            {item.text} <ArrowTopRightIcon />
           </a>
         </li>
       ))}

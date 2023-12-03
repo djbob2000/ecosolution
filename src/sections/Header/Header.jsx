@@ -1,4 +1,4 @@
-import useScrollHook from '../../components/helpers/useScrollHook';
+import useScrollHook from '@/hooks/useScrollHook';
 import Container from '../../components/Container/Container';
 import styles from './Header.module.scss';
 import Logo from '@/components/Logo/Logo';
@@ -11,6 +11,7 @@ export const Header = () => {
   return (
     <>
       <header
+        id="header"
         className={styles.header}
         style={{
           backgroundColor: backgroundColor,

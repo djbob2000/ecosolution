@@ -1,4 +1,4 @@
-import useToggleMenu from '../helpers/useToggleMenu';
+import useToggleMenu from '@/hooks/useToggleMenu';
 import MenuIcon from '@/assets/icons/menu.svg?react';
 import styles from './Burger.module.scss';
 import { Menu } from '../Menu/Menu';

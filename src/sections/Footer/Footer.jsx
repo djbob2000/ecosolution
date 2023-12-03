@@ -7,8 +7,8 @@ import Container from '@/components/Container/Container';
 const Footer = () => {
   return (
     <>
-      <footer className={styles.footer}>
-        <Container className={styles.container}>
+      <Container className={styles['footer-container']}>
+        <footer className={styles.footer} id="footer">
           <div className={styles.wrapper}>
             <Logo className={styles.logo} />
             <CircularArrowButton angle={0} className={styles.btn} />
@@ -35,8 +35,8 @@ const Footer = () => {
             <span>office@ecosolution.com</span>
             <span>ecosolution © 2023</span>
           </div>
-        </Container>
-      </footer>
+        </footer>
+      </Container>
     </>
   );
 };

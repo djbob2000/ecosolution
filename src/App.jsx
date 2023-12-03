@@ -1,5 +1,7 @@
 import { Route, Routes, Navigate } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Layout = lazy(() => import('./components/Layout/Layout'));
 const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
@@ -15,6 +17,7 @@ function App() {
           </Route>
         </Routes>
       </Suspense>
+      <ToastContainer />
     </>
   );
 }
