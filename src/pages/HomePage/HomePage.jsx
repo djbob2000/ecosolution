@@ -5,6 +5,7 @@ import Electricity from '../../sections/Electricity/Electricity';
 import FAQ from '../../sections/Faq/Faq';
 import Cases from '../../sections/Cases/Cases';
 import Footer from '../../sections/Footer/Footer';
+import ContactUs from '../../sections/ContactUs/ContactUs';
 
 const HomePage = () => {
   return (
@@ -15,6 +16,7 @@ const HomePage = () => {
         <Electricity />
         <Cases />
         <FAQ />
+        <ContactUs />
       </main>
       <Footer />
     </>

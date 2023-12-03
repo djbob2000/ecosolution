@@ -7,7 +7,7 @@ import MenuList from './MenuList/MenuList';
 
 export const Menu = ({ toggleMenu }) => {
   return (
-    <div className={styles.backdrop}>
+    <div className={styles.backdrop} onClick={toggleMenu}>
       <div className={styles.menu}>
         <button
           type="button"

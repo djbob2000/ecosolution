@@ -1,14 +1,11 @@
-import { useState } from 'react';
+import useToggleMenu from '../helpers/useToggleMenu';
 import MenuIcon from '@/assets/icons/menu.svg?react';
 import styles from './Burger.module.scss';
 import { Menu } from '../Menu/Menu';
 
 export const Burger = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, toggleMenu] = useToggleMenu();
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
   return (
     <>
       <button

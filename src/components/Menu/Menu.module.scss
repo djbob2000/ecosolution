@@ -92,6 +92,12 @@
 .socials {
     display: flex;
     gap: 8px;
+    color: var(--color-white);
+
+    & svg:hover {
+        color: var(--color-accent);
+        cursor: pointer;
+    }
 }
 
 .menuContent {
