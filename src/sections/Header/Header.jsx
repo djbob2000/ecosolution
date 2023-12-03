@@ -21,7 +21,7 @@ export const Header = () => {
           <Logo />
           <div className={styles.btnWrap}>
             <Burger />
-            <ButtonLink to={'#'}>Get in touch</ButtonLink>
+            <ButtonLink to={'#contacts'}>Get in touch</ButtonLink>
           </div>
         </Container>
       </header>

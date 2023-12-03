@@ -9,7 +9,7 @@ const schema = yup.object().shape({
   fullName: yup.string().required().min(3),
   email: yup.string().required().email(),
   phone: yup.string().required().length(10),
-  message: yup.string().required(),
+  message: yup.string(),
 });
 
 const Form = () => {

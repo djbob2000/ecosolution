@@ -1,22 +1,22 @@
 export const menuItems = [
   {
     text: 'Main',
-    href: '#main',
+    href: 'main',
   },
   {
     text: 'About',
-    href: '#about',
+    href: 'about',
   },
   {
     text: 'Cases',
-    href: '#cases',
+    href: 'cases',
   },
   {
     text: 'FAQ',
-    href: '#faq',
+    href: 'faq',
   },
   {
     text: 'Contact Us',
-    href: '#contact',
+    href: 'contacts',
   },
 ];
