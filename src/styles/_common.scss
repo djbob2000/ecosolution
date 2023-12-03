@@ -79,3 +79,7 @@ picture {
   display: block;
   width: 100%;
 }
+
+.no-scroll {
+  overflow-y: hidden;
+}

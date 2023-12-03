@@ -27,12 +27,14 @@
         left: initial;
         bottom: initial;
         width: 320px;
+        height: 701px;
     }
 
     @include breakpoint(desktop) {
         left: initial;
         bottom: initial;
         width: 365px;
+        height: 873px;
     }
 
 }
@@ -85,4 +87,16 @@
     width: 20px;
     height: 20px;
     flex-shrink: 0;
+}
+
+.socials {
+    display: flex;
+    gap: 8px;
+}
+
+.menuContent {
+    height: calc(100% - 24px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }

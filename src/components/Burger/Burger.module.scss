@@ -6,7 +6,7 @@
     align-items: center;
     border-radius: 500px;
     background-color: var(--color-burger);
-    transition: color var(--animation);
+    transition: all var(--animation);
 
     &:hover,
     &:focus {

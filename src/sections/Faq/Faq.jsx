@@ -4,7 +4,7 @@ import Question from '@/components/Question/Question';
 import Title from '@/components/Title/Title';
 import faqQuestions from '@/constants/faqQuestions';
 import ButtonLink from '@/components/ButtonLink/ButtonLink';
-import styles from './FAQ.module.scss';
+import styles from './Faq.module.scss';
 
 const Faq = () => {
   const [openQuestion, setOpenQuestion] = useState(faqQuestions[0].id);

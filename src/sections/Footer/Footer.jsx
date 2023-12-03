@@ -1,0 +1,44 @@
+import styles from './Footer.module.scss';
+import FbIcon from '../../assets/icons/footer/fb.svg?react';
+import InstagramIcon from '../../assets/icons/footer/instagram.svg?react';
+import Logo from '@/components/Logo/Logo';
+import CircularArrowButton from '@/components/CircularArrowButton/CircularArrowButton';
+import Container from '@/components/Container/Container';
+const Footer = () => {
+  return (
+    <>
+      <footer className={styles.footer}>
+        <Container className={styles.container}>
+          <div className={styles.wrapper}>
+            <Logo className={styles.logo} />
+            <CircularArrowButton angle={0} className={styles.btn} />
+            <div className={styles.socials}>
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FbIcon />
+              </a>
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <InstagramIcon />
+              </a>
+            </div>
+          </div>
+
+          <div className={styles.adress}>
+            <span>79005, Ukraine, Lvivstreet. Shota Rustaveli, 7</span>
+            <span>office@ecosolution.com</span>
+            <span>ecosolution © 2023</span>
+          </div>
+        </Container>
+      </footer>
+    </>
+  );
+};
+
+export default Footer;

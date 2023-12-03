@@ -4,6 +4,7 @@ import About from '../../sections/About/About';
 import Electricity from '../../sections/Electricity/Electricity';
 import FAQ from '../../sections/Faq/Faq';
 import Cases from '../../sections/Cases/Cases';
+import Footer from '../../sections/Footer/Footer';
 
 const HomePage = () => {
   return (
@@ -15,7 +16,7 @@ const HomePage = () => {
         <Cases />
         <FAQ />
       </main>
-      <footer className="footer"></footer>
+      <Footer />
     </>
   );
 };

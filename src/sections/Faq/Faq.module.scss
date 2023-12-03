@@ -1,9 +1,5 @@
 @import '@/styles/breakpoints';
 
-@include breakpoint(tablet) {}
-
-@include breakpoint(desktop) {}
-
 .after_text {
     color: var(--color-text);
     text-align: justify;

@@ -1,0 +1,28 @@
+.menu-list {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.menu-item {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.menu-item-link {
+    color: rgba(255, 255, 255, 0.25);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.96px;
+    transition: color var(--animation);
+
+    &:hover {
+        color: var(--color-white);
+    }
+
+    &:active {
+        color: var(--color-accent);
+
+    }
+}

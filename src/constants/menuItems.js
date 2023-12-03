@@ -1,7 +1,7 @@
 export const menuItems = [
   {
     text: 'Main',
-    href: '/',
+    href: '#main',
   },
   {
     text: 'About',

@@ -1,0 +1,109 @@
+@import '@/styles/breakpoints';
+
+@include breakpoint(tablet) {}
+
+@include breakpoint(desktop) {}
+
+.container {
+    padding: 24px 0;
+    border-top: 1px solid var(--color-accent);
+
+    @include breakpoint(tablet) {
+        padding-bottom: 40px 0;
+    }
+}
+
+.wrapper {
+    display: flex;
+
+    @include breakpoint(tablet) {
+        padding-bottom: 16px;
+    }
+}
+
+.logo {
+    order: 1;
+}
+
+.btn {
+
+    width: 32px;
+    height: 32px;
+
+    @include breakpoint(tablet) {
+        order: 3;
+    }
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.socials {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    @include breakpoint(tablet) {
+        order: 2;
+        width: initial;
+        padding: 0;
+        margin-right: 155px;
+    }
+
+    @include breakpoint(desktop) {
+        margin-right: -143px;
+    }
+
+    & a {
+
+        color: var(--color-text);
+        transition: color var(--animation);
+
+        &:hover {
+            color: var(--color-accent);
+        }
+    }
+}
+
+.adress {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+
+    @include breakpoint(tablet) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    & span {
+        color: var(--color-text);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -0.64px;
+    }
+
+    & span:nth-child(2) {
+        @include breakpoint(tablet) {
+            margin-left: 26px;
+        }
+
+        @include breakpoint(desktop) {
+            margin-left: 324px;
+        }
+
+    }
+}
