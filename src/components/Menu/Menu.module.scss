@@ -35,7 +35,6 @@
     }
 
     @include breakpoint(desktop) {
-        left: initial;
         right: calc(50% - 620px);
         bottom: initial;
         width: 365px;
