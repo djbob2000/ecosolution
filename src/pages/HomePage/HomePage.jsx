@@ -6,10 +6,12 @@ import FAQ from '../../sections/Faq/Faq';
 import Cases from '../../sections/Cases/Cases';
 import Footer from '../../sections/Footer/Footer';
 import ContactUs from '../../sections/ContactUs/ContactUs';
+import { Header } from '../../sections/Header/Header';
 
 const HomePage = () => {
   return (
     <>
+      <Header />
       <main className={styles.main}>
         <Main />
         <About />
