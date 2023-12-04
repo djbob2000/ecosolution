@@ -22,7 +22,12 @@
     background: var(--color-bg-menu);
     backdrop-filter: blur(12.5px);
 
+    @include breakpoint(mobile) {
+        left: 20px;
+    }
+
     @include breakpoint(tablet) {
+        left: initial;
         right: calc(50% - 354px);
         bottom: initial;
         width: 320px;

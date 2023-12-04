@@ -1,7 +1,8 @@
 {
   "name": "ecosolution",
   "private": true,
-  "version": "0.0.0",
+  "homepage": "https://djbob2000.github.io/ecosolution/",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
