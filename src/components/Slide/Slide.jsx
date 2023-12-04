@@ -11,7 +11,7 @@ export default function Slide({
 }) {
   const basePath = import.meta.env.BASE_URL;
   return (
-    <div className={styles.slide} role="presentation">
+    <div className={styles.slide}>
       <div className={styles['slide-thumb']}>
         <img
           className={styles['slide-img']}
@@ -19,6 +19,7 @@ export default function Slide({
           srcSet={`${basePath}/images/cases/${imageName}-1x.jpg 480w, ${basePath}/images/cases/${imageName}-2x.jpg 768w, ${basePath}/images/cases/${imageName}-3x.jpg 1280w`}
           sizes="(max-width: 480px) 480px, (max-width: 768px) 768px, 1280px"
           alt={description}
+          aria-label={`${place} ${enterprise}`}
         />
       </div>
       <div className={styles['slide-text-content']}>
