@@ -7,7 +7,7 @@ const ButtonLink = ({ children, to, className }) => {
   const combinedClass = classNames(styles.button, className);
 
   return (
-    <a href={to} className={combinedClass} role="button">
+    <a href={to} className={combinedClass} role="button" aria-label={children}>
       {children}
       <ArrowDownIcon />
     </a>

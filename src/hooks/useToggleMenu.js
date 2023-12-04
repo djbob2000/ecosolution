@@ -14,6 +14,9 @@ const useToggleMenu = () => {
       }
     };
     document.addEventListener('keydown', closeMenuOnEscape);
+    isOpen
+      ? document.body.classList.add('no-scroll')
+      : document.body.classList.remove('no-scroll');
 
     return () => {
       document.removeEventListener('keydown', closeMenuOnEscape);

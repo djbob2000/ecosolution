@@ -29,7 +29,7 @@ export default function Cases() {
 
   return (
     <>
-      <section className={styles.section_cases} id="cases">
+      <section className={styles.section_cases} id="cases" role="region">
         <Container className={styles.container_cases}>
           <div className={styles['slider-header']}>
             <Title h={2} className={styles['title-cases']} aria-live="polite">

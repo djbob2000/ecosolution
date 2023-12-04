@@ -20,7 +20,7 @@ import styles from './About.module.scss';
 
 export default function About() {
   return (
-    <section className={styles.section_about} id="about">
+    <section className={styles.section_about} id="about" role="region">
       <Container>
         <div role="presentation" className={styles.titleBlock}>
           <Title h={2} className={styles.about_title}>

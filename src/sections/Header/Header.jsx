@@ -18,13 +18,17 @@ export const Header = () => {
       }}
     >
       <Container className={styles.header__container}>
-        <Logo />
-        <div className={styles.btnWrap}>
+        <Logo aria-label="Navigate to Home" />
+        <nav
+          className={styles.header__nav}
+          role="navigation"
+          aria-label="Main menu"
+        >
           <Burger />
-          <ButtonLink to={'#contacts'} aria-label="Navigate to Contacts">
+          <ButtonLink to={'#contacts'} aria-label="Navigate to Contact us">
             Get in touch
           </ButtonLink>
-        </div>
+        </nav>
       </Container>
     </header>
   );

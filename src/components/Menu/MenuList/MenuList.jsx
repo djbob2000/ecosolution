@@ -18,6 +18,7 @@ export default function MenuList({ toggleMenu }) {
             className={styles['menu-item-link']}
             onClick={toggleMenu}
             activeClass={styles['active']}
+            aria-label={item.text}
           >
             {item.text} <ArrowTopRightIcon />
           </Link>

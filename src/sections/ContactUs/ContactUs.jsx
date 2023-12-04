@@ -12,7 +12,11 @@ import styles from './ContactUs.module.scss';
 export default function ContactUs() {
   return (
     <>
-      <section className={styles['section-contacts']} id="contacts">
+      <section
+        className={styles['section-contacts']}
+        id="contacts"
+        role="region"
+      >
         <Container>
           <Title h={2} className={styles['contacts-title']}>
             Contact Us

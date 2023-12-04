@@ -10,6 +10,9 @@ const Question = ({ item, isOpen, toggleAnswer }) => (
       <button
         className={styles.openButton}
         onClick={() => toggleAnswer(item.id)}
+        role="button"
+        aria-expanded={isOpen}
+        aria-controls={`answer-${item.id}`}
       >
         {isOpen ? (
           <MinusIcon className={styles.minusIcon} />
@@ -17,10 +20,19 @@ const Question = ({ item, isOpen, toggleAnswer }) => (
           <PlusIcon className={styles.plusIcon} />
         )}
       </button>
-      <p className={styles.question}>{item.question}</p>
+      <p className={styles.question} id={`question-${item.id}`}>
+        {item.question}
+      </p>
     </div>
     {isOpen && (
-      <p className={`${styles.answer} ${styles.open}`}>{item.answer}</p>
+      <p
+        className={`${styles.answer} ${styles.open}`}
+        role="region"
+        aria-labelledby={`question-${item.id}`}
+        id={`answer-${item.id}`}
+      >
+        {item.answer}
+      </p>
     )}
   </li>
 );

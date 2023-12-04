@@ -20,7 +20,12 @@ export default function CircularArrowButton({
   };
 
   return (
-    <button className={classNames(buttonClasses, className)} {...props}>
+    <button
+      type="button"
+      role="button"
+      className={classNames(buttonClasses, className)}
+      {...props}
+    >
       <ArrowRight style={svgStyle} />
     </button>
   );

@@ -9,7 +9,11 @@ export default function Title({ children, h, className }) {
   const combinedClass = classNames(headingClass, className);
 
   return h >= 1 && h <= 3
-    ? createElement(`h${h}`, { className: combinedClass }, children)
+    ? createElement(
+        `h${h}`,
+        { className: combinedClass, role: 'heading', ariaLevel: h },
+        children
+      )
     : null;
 }
 

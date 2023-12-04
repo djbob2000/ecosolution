@@ -43,8 +43,9 @@ const Form = () => {
           onChange={handleChange}
           onBlur={() => trigger('fullName')}
           className={formState.errors.fullName ? styles.error : ''}
+          aria-describedby="fullNameError"
         />
-        <p className={styles.errorMessage}>
+        <p id="fullNameError" className={styles.errorMessage}>
           {formState.errors.fullName?.message || '\u00A0'}
         </p>
       </div>
@@ -62,8 +63,9 @@ const Form = () => {
           onChange={handleChange}
           onBlur={() => trigger('email')}
           className={formState.errors.email ? styles.error : ''}
+          aria-describedby="emailError"
         />
-        <p className={styles.errorMessage}>
+        <p id="emailError" className={styles.errorMessage}>
           {formState.errors.email?.message || '\u00A0'}
         </p>
       </div>
@@ -80,8 +82,9 @@ const Form = () => {
           onChange={handleChange}
           onBlur={() => trigger('phone')}
           className={formState.errors.phone ? styles.error : ''}
+          aria-describedby="phoneError"
         />
-        <p className={styles.errorMessage}>
+        <p id="phoneError" className={styles.errorMessage}>
           {formState.errors.phone?.message || '\u00A0'}
         </p>
       </div>
@@ -97,8 +100,9 @@ const Form = () => {
           onChange={handleChange}
           onBlur={() => trigger('message')}
           className={formState.errors.message ? styles.error : ''}
+          aria-describedby="messageError"
         />
-        <p className={styles.errorMessage}>
+        <p id="messageError" className={styles.errorMessage}>
           {formState.errors.message?.message || '\u00A0'}
         </p>
       </div>

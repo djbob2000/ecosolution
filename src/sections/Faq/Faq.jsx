@@ -14,7 +14,7 @@ const Faq = () => {
   };
 
   return (
-    <div className={styles.section_faq} id="faq">
+    <section className={styles.section_faq} id="faq" role="region">
       <Container className={styles.container_faq}>
         <Title h={2} className={styles.title_faq}>
           Frequently Asked Questions
@@ -50,7 +50,7 @@ const Faq = () => {
           </ButtonLink>
         </div>
       </Container>
-    </div>
+    </section>
   );
 };
 

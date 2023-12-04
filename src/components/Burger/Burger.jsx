@@ -13,6 +13,10 @@ export const Burger = () => {
         tabIndex={0}
         role={'button'}
         onClick={toggleMenu}
+        aria-label={isOpen ? 'Close menu' : 'Open menu'}
+        aria-expanded={isOpen}
+        aria-controls="menu"
+        aria-haspopup="true"
       >
         <MenuIcon />
       </button>

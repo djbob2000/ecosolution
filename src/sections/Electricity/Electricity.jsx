@@ -19,7 +19,11 @@ const Electricity = () => {
   };
 
   return (
-    <section className={styles.section_electricity} id="electricity">
+    <section
+      className={styles.section_electricity}
+      id="electricity"
+      role="region"
+    >
       <Container className={styles.container_electricity}>
         <Title h={2} className={styles.electricity_title}>
           Electricity we produced for all time
