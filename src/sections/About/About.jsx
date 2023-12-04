@@ -64,11 +64,8 @@ export default function About() {
             <img
               src={AboutManTablet}
               alt="Wind farms fields"
-              aria-labelledby="man-fields-title"
+              aria-labelledby="Wind farms fields"
             />
-            <Title h={3} id="man-fields-title" className={styles.hiddenTitle}>
-              Wind farms fields
-            </Title>
           </picture>
 
           <picture className={styles.picture}>
@@ -80,11 +77,8 @@ export default function About() {
             <img
               src={AboutWindTablet}
               alt="Wind farms fields"
-              aria-labelledby="wind-farms-title"
+              aria-labelledby="Wind farms fields"
             />
-            <Title h={3} id="wind-farms-title" className={styles.hiddenTitle}>
-              Wind farms fields
-            </Title>
           </picture>
 
           <InfoBlock
