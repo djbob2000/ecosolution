@@ -32,11 +32,14 @@ export default function Cases() {
       <section className={styles.section_cases} id="cases">
         <Container className={styles.container_cases}>
           <div className={styles['slider-header']}>
-            <Title h={2} className={styles['title-cases']}>
+            <Title h={2} className={styles['title-cases']} aria-live="polite">
               Successful cases of our company
             </Title>
             <div className={styles['slider-control']}>
-              <span className={styles['slider-current-slide']}>
+              <span
+                className={styles['slider-current-slide']}
+                aria-live="assertive"
+              >
                 {currentSlideNumber.toString().padStart(2, '0')}
                 <span>/{AllSlideNumber.toString().padStart(2, '0')}</span>
               </span>
@@ -45,11 +48,13 @@ export default function Cases() {
                   outlined={true}
                   angle={-90}
                   onClick={slidePrev}
+                  aria-label="Previous Slide"
                 />
                 <CircularArrowButton
                   outlined={true}
                   angle={90}
                   onClick={slideNext}
+                  aria-label="Next Slide"
                 />
               </div>
             </div>

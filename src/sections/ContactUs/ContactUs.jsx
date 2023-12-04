@@ -58,6 +58,7 @@ export default function ContactUs() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="Visit our Facebook page"
+                      role="link"
                     >
                       <FbIcon alt="Facebook" />
                     </a>
@@ -66,6 +67,7 @@ export default function ContactUs() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="Visit our Instagram page"
+                      role="link"
                     >
                       <InstagramIcon alt="Instagram" />
                     </a>

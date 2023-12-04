@@ -24,9 +24,22 @@ const Electricity = () => {
         <Title h={2} className={styles.electricity_title}>
           Electricity we produced for all time
         </Title>
-        <div role="presentation" className={styles.textWrapper}>
-          <span className={styles.number}>{formatNumber(number)}</span>
-          <span className={styles.unit}>KWh</span>
+        <div
+          role="presentation"
+          className={styles.textWrapper}
+          aria-live="polite"
+        >
+          <span
+            className={styles.number}
+            aria-label={`Produced electricity: ${formatNumber(
+              number
+            )} kilowatt-hours`}
+          >
+            {formatNumber(number)}
+          </span>
+          <span className={styles.unit} aria-hidden="true">
+            KWh
+          </span>
         </div>
       </Container>
     </section>

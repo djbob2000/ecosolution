@@ -14,8 +14,12 @@ export default function Main() {
   return (
     <section className={styles.section_main} id="main">
       <Container>
-        <div role="presentation" className={styles.titleBlock}>
-          <Title h={1} className={styles.main_title}>
+        <div
+          role="presentation"
+          className={styles.titleBlock}
+          aria-labelledby="main-title"
+        >
+          <Title h={1} className={styles.main_title} id="main-title">
             RENEWABLE ENERGY For any task
           </Title>
           <div role="presentation" className={styles.textWrapper}>
@@ -29,7 +33,7 @@ export default function Main() {
             </a>
           </div>
         </div>
-        <ul className={styles.contactsList}>
+        <ul className={styles.contactsList} aria-hidden="true">
           <li className={styles.contact}>
             <span>79005, Ukraine, Lvivstreet. Shota Rustaveli, 7</span>
           </li>
@@ -50,7 +54,7 @@ export default function Main() {
             srcSet={`${mainTablet} 1x, ${mainTablet2x} 2x`}
           />
           <source srcSet={`${main2x} 2x`} />
-          <img src={main} alt="Wind turbine clean energy" />
+          <img src={main} alt="Wind turbine clean energy" role="img" />
         </picture>
       </Container>
     </section>

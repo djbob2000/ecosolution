@@ -9,22 +9,23 @@ export const Header = () => {
   const { backgroundColor } = useScrollHook();
 
   return (
-    <>
-      <header
-        id="header"
-        className={styles.header}
-        style={{
-          backgroundColor: backgroundColor,
-        }}
-      >
-        <Container className={styles.header__container}>
-          <Logo />
-          <div className={styles.btnWrap}>
-            <Burger />
-            <ButtonLink to={'#contacts'}>Get in touch</ButtonLink>
-          </div>
-        </Container>
-      </header>
-    </>
+    <header
+      id="header"
+      className={styles.header}
+      role="banner"
+      style={{
+        backgroundColor: backgroundColor,
+      }}
+    >
+      <Container className={styles.header__container}>
+        <Logo />
+        <div className={styles.btnWrap}>
+          <Burger />
+          <ButtonLink to={'#contacts'} aria-label="Navigate to Contacts">
+            Get in touch
+          </ButtonLink>
+        </div>
+      </Container>
+    </header>
   );
 };

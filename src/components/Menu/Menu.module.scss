@@ -16,7 +16,6 @@
     position: fixed;
     top: 36px;
     right: 20px;
-    left: 20px;
     bottom: 36px;
     padding: 24px;
     border-radius: 25px;
@@ -24,14 +23,14 @@
     backdrop-filter: blur(12.5px);
 
     @include breakpoint(tablet) {
-        left: initial;
+        right: calc(50% - 354px);
         bottom: initial;
         width: 320px;
         height: 701px;
     }
 
     @include breakpoint(desktop) {
-        left: initial;
+        right: calc(50% - 620px);
         bottom: initial;
         width: 365px;
         height: 873px;
@@ -40,7 +39,6 @@
 }
 
 .btn_close {
-    // position: relative;
 
     display: flex;
     align-items: flex-end;

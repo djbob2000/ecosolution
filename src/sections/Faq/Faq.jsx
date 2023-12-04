@@ -2,8 +2,8 @@ import { useState } from 'react';
 import Container from '@/components/Container/Container';
 import Question from '@/components/Question/Question';
 import Title from '@/components/Title/Title';
-import faqQuestions from '@/constants/faqQuestions';
 import ButtonLink from '@/components/ButtonLink/ButtonLink';
+import faqQuestions from '@/constants/faqQuestions';
 import styles from './Faq.module.scss';
 
 const Faq = () => {
@@ -19,7 +19,11 @@ const Faq = () => {
         <Title h={2} className={styles.title_faq}>
           Frequently Asked Questions
         </Title>
-        <div className={styles.ul_container}>
+        <div
+          className={styles.ul_container}
+          role="region"
+          aria-label="Frequently Asked Questions"
+        >
           <ul>
             {faqQuestions.map(item => (
               <Question
@@ -27,6 +31,8 @@ const Faq = () => {
                 item={item}
                 isOpen={openQuestion === item.id}
                 toggleAnswer={toggleAnswer}
+                aria-expanded={openQuestion === item.id}
+                aria-controls={`answer-${item.id}`}
               />
             ))}
           </ul>
@@ -35,7 +41,11 @@ const Faq = () => {
           <p className={styles.after_text}>
             Didn&apos;t find the answer to your question?
           </p>
-          <ButtonLink to={'#contacts'} className={styles.buttonLink}>
+          <ButtonLink
+            to={'#contacts'}
+            className={styles.buttonLink}
+            aria-label="Contact Us"
+          >
             Contact Us
           </ButtonLink>
         </div>

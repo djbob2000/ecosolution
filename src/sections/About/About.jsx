@@ -61,7 +61,14 @@ export default function About() {
               srcSet={`${AboutManDesktop} 1x, ${AboutManDesktop2x} 2x`}
             />
             <source srcSet={`${AboutManTablet} 1x, ${AboutManTablet2x} 2x`} />
-            <img src={AboutManTablet} alt="Wind farms fields" />
+            <img
+              src={AboutManTablet}
+              alt="Wind farms fields"
+              aria-labelledby="man-fields-title"
+            />
+            <Title h={3} id="man-fields-title" className={styles.hiddenTitle}>
+              Wind farms fields
+            </Title>
           </picture>
 
           <picture className={styles.picture}>
@@ -70,7 +77,14 @@ export default function About() {
               srcSet={`${AboutWindDesktop} 1x, ${AboutWindDesktop2x} 2x`}
             />
             <source srcSet={`${AboutWindTablet} 1x, ${AboutWindTablet2x} 2x`} />
-            <img src={AboutWindTablet} alt="Wind farms fields" />
+            <img
+              src={AboutWindTablet}
+              alt="Wind farms fields"
+              aria-labelledby="wind-farms-title"
+            />
+            <Title h={3} id="wind-farms-title" className={styles.hiddenTitle}>
+              Wind farms fields
+            </Title>
           </picture>
 
           <InfoBlock

@@ -13,13 +13,15 @@ const schema = yup.object().shape({
 });
 
 const Form = () => {
-  const { register, handleSubmit, formState, setValue, trigger } = useForm({
-    resolver: yupResolver(schema),
-  });
+  const { register, handleSubmit, formState, setValue, trigger, reset } =
+    useForm({
+      resolver: yupResolver(schema),
+    });
 
   const handleFormSubmit = data => {
     console.log(data);
     toast.success('Form submitted. See console');
+    reset();
   };
 
   const handleChange = event => {
@@ -33,7 +35,9 @@ const Form = () => {
         <input
           type="text"
           name="fullName"
+          id="fullName"
           placeholder="John Rosie"
+          autoComplete="name"
           {...register('fullName')}
           value={formState.data?.fullName}
           onChange={handleChange}
@@ -50,7 +54,9 @@ const Form = () => {
         <input
           type="email"
           name="email"
+          id="email"
           placeholder="johnrosie@gmail.com"
+          autoComplete="email"
           {...register('email')}
           value={formState.data?.email}
           onChange={handleChange}
@@ -66,7 +72,9 @@ const Form = () => {
         <input
           type="tel"
           name="phone"
+          id="phone"
           placeholder="380961234567"
+          autoComplete="off"
           {...register('phone')}
           value={formState.data?.phone}
           onChange={handleChange}
@@ -82,6 +90,7 @@ const Form = () => {
         <label htmlFor="message">Message: </label>
         <textarea
           name="message"
+          id="message"
           placeholder="Your message"
           {...register('message')}
           value={formState.data?.message}
